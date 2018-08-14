@@ -1,0 +1,38 @@
+@import '../../../../assets/less/variables/variable.less';
+
+.user-container {
+    position: relative;
+    height: @headerH;
+    .avatar-container {
+        height: 100%;
+        padding: 0px 30px;
+        display: flex;
+        align-items: center;
+        .avatar {
+            width: @headerAvatarS;
+            height: @headerAvatarS;
+            border-radius: 50%;
+            background: #eee;
+        }
+        .name {
+            margin: 0px 10px;
+        }
+    }
+    
+    .nav-list {
+        position: absolute;
+        top: @headerH;
+        right: 0;
+        width: 100%;
+        min-width: 160px;
+        display: none;
+        .item {
+            padding-left: 15px;
+            .icon{
+                margin-right: 15px;
+            }
+        }
+    }
+    
+}
+

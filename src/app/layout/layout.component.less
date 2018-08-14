@@ -1,0 +1,33 @@
+@import '../../assets/less/variables/variable.less';
+
+mat-sidenav{
+  width: @sidenavW;
+}
+
+.layout-container{
+    .header-container {
+        width: 100%;
+        height: @headerH;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+    .sidenav-container{
+        width: 100%;
+        height: 100vh;
+        .sidenav{
+            position: fixed;
+            top: @headerH;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            min-width: @sidenavW;
+            background-color: #fafafa;
+            box-shadow: 6px 0 6px rgba(0,0,0,.1);
+        }
+        .main-container{
+           padding: 80px 0px;
+        }
+    }
+}

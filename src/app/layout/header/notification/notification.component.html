@@ -1,0 +1,64 @@
+<div class="notification-container">
+    <div class="notifications-tip">
+        <mat-icon matBadge="15" matBadgeColor="warn">notifications_none</mat-icon>
+    </div>
+  
+    <mat-card class="notification-box">
+        <mat-card-title class="card-title">
+            <div class="title-name">
+                <div class="name">通知</div>
+                <div class="extra">您有 {{ notifications?.length }} 条新的通知</div>
+            </div>
+            <span class="close">关闭</span>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content class="card-content">
+            <div *ngIf="notifications.length !== 0; then thenBlock else elseBlock;"></div>
+        </mat-card-content>
+        <mat-divider *ngIf="notifications.length !== 0"></mat-divider>
+        <mat-card-footer class="card-footer" *ngIf="notifications.length !== 0">
+            <span>查看所有通知</span>
+        </mat-card-footer>
+      </mat-card>
+</div>
+
+<ng-template #thenBlock>
+  <mat-nav-list class="nav-list">
+    <mat-list-item class="item"> 
+        <mat-icon class="icon">notifications</mat-icon>
+        <div class="content">
+            <span class="title">2018 前端发展趋势</span>
+            <span class="time">23分钟前</span>
+        </div>
+        <mat-icon class="close">close</mat-icon>
+    </mat-list-item>
+    <mat-list-item class="item"> 
+        <mat-icon class="icon">notifications</mat-icon>
+        <div class="content">
+            <span class="title">2018 前端发展趋势</span>
+            <span class="time">23分钟前</span>
+        </div>
+        <mat-icon class="close">close</mat-icon>
+    </mat-list-item>
+    <mat-list-item class="item"> 
+        <mat-icon class="icon">notifications</mat-icon>
+        <div class="content">
+            <span class="title">2018 前端发展趋势</span>
+            <span class="time">23分钟前</span>
+        </div>
+        <mat-icon class="close">close</mat-icon>
+    </mat-list-item>
+    <mat-list-item class="item"> 
+        <mat-icon class="icon">notifications</mat-icon>
+        <div class="content">
+            <span class="title">2018 前端发展趋势</span>
+            <span class="time">23分钟前</span>
+        </div>
+        <mat-icon class="close">close</mat-icon>
+    </mat-list-item>
+  </mat-nav-list>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class="no-notification">暂无通知</div>
+</ng-template>

@@ -1,0 +1,84 @@
+@import '../../../../assets/less/variables/variable.less';
+
+.notification-container {
+    position: relative;
+    height: @headerH;
+    .notifications-tip{
+        height: 100%;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .notification-box {
+        position: absolute;
+        top: @headerH;
+        right: 0;
+        width: 100%;
+        min-width: 300px;
+        padding: 0px !important;
+        display: none;
+        .card-title {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px 5px 15px;
+            margin-bottom: 0px;
+            .title-name {
+                flex: 1;
+                .name {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+                .extra {
+                    font-size: 13px;
+                }
+            }
+            .close{
+                font-size: 13px;
+            }
+        }
+        .card-content {
+            height: 280px;
+            overflow-y: auto;
+            margin-bottom: 0px !important;
+           .nav-list{
+               padding: 0px !important;
+               .item {
+                    padding: 10px 0px;
+                    .icon{
+                        margin-right: 15px;
+                    }
+                    .content{
+                        font-size: 13px;
+                        flex: 1;
+                        .title{
+                            margin-top: 10px;
+                            display: block;
+                            line-height: 13px;
+                        }
+                        .time{
+                            line-height: 13px;
+                        }
+                    }
+                 }
+           }
+
+           .no-notification{
+               height: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;  
+           }
+        }
+        .card-footer {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        
+    }
+}
