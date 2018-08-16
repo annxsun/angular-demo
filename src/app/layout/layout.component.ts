@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./layout.component.less']
 })
 export class LayoutComponent implements OnInit {
+    isOpen: Boolean;
     constructor() { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.isOpen = true;
+    }
 }

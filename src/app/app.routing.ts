@@ -7,7 +7,14 @@ const routes: Routes = [
     {
         path: '',
         component: LayoutComponent,
-    }
+        children: [
+            {
+              path: 'http',
+              loadChildren: './view/myhttp/myhttp.module#MyHttpModule'
+            },
+        ]
+    },
+    { path: '**', redirectTo: '', component: LayoutComponent }
 ];
 
 @NgModule({

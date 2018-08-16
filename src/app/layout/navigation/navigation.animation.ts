@@ -7,14 +7,20 @@ import {
   } from '@angular/animations';
 
  export const NavigationSlideInOut = trigger('slideInOut', [
-    state('0', style({
+    state('*', style({
         height: '0px',
         display: 'none'
     })),
-    state('1', style({
+    state('active-style', style({
         height: '*',
         display: 'block'
     })),
-    transition('1 => 0', animate('300ms ease-out')),
-    transition('0 => 1', animate('300ms ease-in'))
+    state('active-instyle', style({
+        height: '*',
+        display: 'block'
+    })),
+    transition('active-style => *', animate('300ms ease-out')),
+    transition('* => active-style', animate('300ms ease-in')),
+    transition('active-instyle => *', animate('300ms ease-out')),
+    transition('* => active-instyle', animate('300ms ease-in'))
  ]);

@@ -1,11 +1,12 @@
-<div class="user-container" >
-    <div class="avatar-container">
-        <img class="avatar">
-        <span class="name">sunxq</span>
-        <mat-icon class="icon">keyboard_arrow_down</mat-icon>
-    </div>
-
-    <mat-nav-list class="nav-list shadow">
+<div class="user-container" [documentClose]="this">
+    <button mat-button (click)="toggleDropdown()">
+        <div class="avatar-container">
+            <img class="avatar">
+            <span class="name">sunxq</span>
+            <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+        </div>
+    </button>
+    <mat-nav-list class="nav-list shadow" [class.open]="isOpen">
         <mat-list-item class="item"> 
             <mat-icon class="icon">account_circle</mat-icon>
             <span class="title">个人</span>

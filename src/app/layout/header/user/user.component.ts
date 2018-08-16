@@ -6,7 +6,25 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./user.component.less']
 })
 export class UserComponent implements OnInit {
+
+    isOpen: boolean;
     constructor() { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.isOpen = false;
+     }
+
+    /**
+     * 点击显示消息弹出框,再次点击消息弹出框
+     */
+    toggleDropdown() {
+        this.isOpen = !this.isOpen;
+    }
+
+    /**
+     * 点击关闭按钮，关闭消息弹出框
+     */
+    close() {
+        this.isOpen = false;
+    }
 }

@@ -1,15 +1,15 @@
-<div class="notification-container">
-    <div class="notifications-tip">
-        <mat-icon matBadge="15" matBadgeColor="warn">notifications_none</mat-icon>
+<div class="notification-container"  [documentClose]="this">
+    <div class="notifications-tip" (click)="toggleDropdown()">
+        <button mat-icon-button><mat-icon [matBadge]="notifications?.length" matBadgeColor="warn">notifications_none</mat-icon></button>
     </div>
   
-    <mat-card class="notification-box">
+    <mat-card class="notification-box" [class.open]="isOpen">
         <mat-card-title class="card-title">
             <div class="title-name">
                 <div class="name">通知</div>
                 <div class="extra">您有 {{ notifications?.length }} 条新的通知</div>
             </div>
-            <span class="close">关闭</span>
+            <button mat-icon-button (click)="close()"><span class="close">关闭</span></button>
         </mat-card-title>
         <mat-divider></mat-divider>
         <mat-card-content class="card-content">
@@ -24,37 +24,13 @@
 
 <ng-template #thenBlock>
   <mat-nav-list class="nav-list">
-    <mat-list-item class="item"> 
+    <mat-list-item class="item" *ngFor="let item of notifications"> 
         <mat-icon class="icon">notifications</mat-icon>
         <div class="content">
-            <span class="title">2018 前端发展趋势</span>
-            <span class="time">23分钟前</span>
+            <span class="title"> {{item.title}}</span>
+            <span class="time"> {{item.lastTime}}</span>
         </div>
-        <mat-icon class="close">close</mat-icon>
-    </mat-list-item>
-    <mat-list-item class="item"> 
-        <mat-icon class="icon">notifications</mat-icon>
-        <div class="content">
-            <span class="title">2018 前端发展趋势</span>
-            <span class="time">23分钟前</span>
-        </div>
-        <mat-icon class="close">close</mat-icon>
-    </mat-list-item>
-    <mat-list-item class="item"> 
-        <mat-icon class="icon">notifications</mat-icon>
-        <div class="content">
-            <span class="title">2018 前端发展趋势</span>
-            <span class="time">23分钟前</span>
-        </div>
-        <mat-icon class="close">close</mat-icon>
-    </mat-list-item>
-    <mat-list-item class="item"> 
-        <mat-icon class="icon">notifications</mat-icon>
-        <div class="content">
-            <span class="title">2018 前端发展趋势</span>
-            <span class="time">23分钟前</span>
-        </div>
-        <mat-icon class="close">close</mat-icon>
+        <mat-icon class="close" (click)="removeNotifications(item, $event)">close</mat-icon>
     </mat-list-item>
   </mat-nav-list>
 </ng-template>

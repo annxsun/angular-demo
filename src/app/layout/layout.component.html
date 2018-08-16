@@ -1,8 +1,8 @@
 
 <div class="layout-container">
-    <app-header class="header-container shadow"></app-header>
+    <app-header class="header-container shadow" [sidenav]="sidenav"></app-header>
     <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav class="sidenav" mode="side" opened>
+        <mat-sidenav class="sidenav" mode="side" opened #sidenav>
             <app-navigation></app-navigation>
         </mat-sidenav>
         <mat-sidenav-content>

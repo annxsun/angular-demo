@@ -6,6 +6,8 @@
     display: flex;
     align-items: center; 
     justify-content: start;
+    text-decoration: none;
+    color: inherit;
     
     @iconS:16px;
     .navigation-icon{
@@ -35,8 +37,32 @@
         transition: opacity .2s ease-in-out .1s;
         background-color: bisque;
     }
+    .navigation-collapse-arrow {
+        margin-right: 12px;
+    }
+    &:hover {
+        background-color: #e0dfdf;
+        font-weight: bolder;
+    }
+    &.active {
+        .navigation-collapse-arrow {
+            transform: rotate(90deg);
+        }
+        .navigation-title{
+            font-weight: bolder;
+        }
+    }
+
 }
 
-.navigation-children{ 
-    padding-left: 40px;
+.navigation-children { 
+    overflow: hidden;
+    .navigation-title{
+        padding-left: 40px;
+    }
+    .navigation-children { 
+        .navigation-title{
+            padding-left: 80px;
+        }
+    }
 }

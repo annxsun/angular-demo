@@ -3,7 +3,7 @@
     <mat-toolbar-row class="header-row"> 
         <app-brand class="brand-container"></app-brand>
         <div class="menu-controll">
-            <mat-icon>menu</mat-icon>
+            <button mat-button class="menu-button" (click)="sidenav.opened = !sidenav.opened"><mat-icon>menu</mat-icon></button>
         </div>
         <app-notification class="notifications"></app-notification>
         <app-user></app-user>
