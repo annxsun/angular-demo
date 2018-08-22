@@ -1,0 +1,23 @@
+.info-card {
+    padding: 0px !important;
+    .card-title {
+        padding: 20px;
+    }
+
+    .card-form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        > * {
+            width: 50%;
+        }  
+        div.form-button {
+            text-align: center;
+            button{
+                margin: 10px;
+            }
+        }
+
+    }
+
+}

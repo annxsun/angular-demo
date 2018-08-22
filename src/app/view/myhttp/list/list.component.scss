@@ -1,0 +1,40 @@
+
+
+.table-card {
+    a{
+        cursor: pointer;
+        &:hover {
+            font-weight: bolder;
+        }
+    }
+    .table-tool{
+        display: flex;
+        align-items: flex-end;
+        .filter-box {
+            margin: 0px;
+            padding: 5px 20px;
+            font-size: 12px;
+            flex: 1;
+            > * {
+                margin-right: 30px;
+            }
+        }
+        .operator-box{
+             margin-left: 30px;
+             button {
+                color: #fff;
+             }
+        }
+    }
+    .table {
+        width: 100%;
+        .table-icon-th {
+            padding-left: 10px;
+        }
+        .table-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+

@@ -1,0 +1,50 @@
+@import '../../../../assets/scss/variable.scss';
+
+.sign-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: $mainColor;
+    .mat-card {
+        padding: 0px;
+        padding-right: 20px;
+    }
+    .sign {
+        display: block;
+        padding-left: 50px;
+        width: 45%;
+        height: 100%;
+        overflow: auto;
+        .sign-title{
+          padding-top: 60px;
+          padding-bottom: 30px; 
+        }
+        .sign-form {
+            display: flex;
+            flex-direction: column;
+            & > *{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .tips {
+            text-align: right;
+            margin-top: -10px;
+            a {
+                color: $mainColor;
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: underline;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+           
+        }
+        .submit {
+            margin-top: 50px;
+        }
+    }
+}

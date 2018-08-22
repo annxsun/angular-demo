@@ -1,17 +1,17 @@
-@import '../../../../assets/less/variables/variable.less';
+@import '../../../../assets/scss/variable.scss';
 
 .user-container {
     position: relative;
-    height: @headerH;
+    height: $headerH;
     .avatar-container {
         height: 100%;
         padding: 0px 30px;
         display: flex;
         align-items: center;
-        height: @headerH;
+        height: $headerH;
         .avatar {
-            width: @headerAvatarS;
-            height: @headerAvatarS;
+            width: $headerAvatarS;
+            height: $headerAvatarS;
             border-radius: 50%;
             background: #eee;
         }
@@ -21,10 +21,10 @@
     }
     .nav-list {
         position: absolute;
-        top: @headerH;
+        top: $headerH;
         right: 0;
         width: 100%;
-        min-width: 160px;
+        min-width: $userW;
         transform: translateY(-135%);
         visibility: hidden;
         transition: transform .4s cubic-bezier(.25,.8,.25,1), visibility .4s cubic-bezier(.25,.8,.25,1);

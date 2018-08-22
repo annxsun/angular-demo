@@ -1,1 +1,44 @@
-<h1>create</h1>
+<mat-card class="info-card">
+    <mat-card-title class="card-title">
+        基本信息
+    </mat-card-title>
+    <mat-card-content>
+        <form class="card-form" *ngIf="hasDate" [formGroup]="userForm">
+            <mat-form-field>
+                <mat-label>姓名</mat-label>
+                <input type="text" placeholder="请输入姓名" formControlName="name" required matInput>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.name">{{formValidatiionInfo.formErrors.name}}</mat-error>
+               </mat-form-field>
+            <mat-form-field>
+                <mat-label>邮箱</mat-label>
+                <input type="email" placeholder="请输入邮箱" formControlName="email" required matInput>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.email">{{formValidatiionInfo.formErrors.email}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>出生日期</mat-label>
+                <input [matDatepicker]="picker" placeholder="请选择出生日期"  formControlName="birth" required matInput> 
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.birth">{{formValidatiionInfo.formErrors.birth}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="请选择爱好" formControlName="hobby" required multiple>
+                    <mat-option value="吃饭">吃饭</mat-option>
+                    <mat-option value="睡觉">睡觉</mat-option>
+                    <mat-option value="打豆豆">打豆豆</mat-option>
+                </mat-select>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.hobby">{{formValidatiionInfo.formErrors.hobby}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="请选择角色" formControlName="role" required>
+                    <mat-option value="管理员">管理员</mat-option>
+                    <mat-option value="普通用户">普通用户</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="form-button">
+                <button class="submit" mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid" (click)="submit()">提交</button>
+                <button mat-raised-button (click)="back()">返回</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

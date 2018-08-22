@@ -1,22 +1,30 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 
 import { NavigationSlideInOut } from '../navigation.animation';
-import { navigations } from '../../../../../config/navigation';
+import { navigations } from 'config/navigation';
 
 @Component({
     selector: 'app-navigation-item',
     templateUrl: './navigation-item.component.html',
-    styleUrls: ['./navigation-item.component.less'],
+    styleUrls: ['./navigation-item.component.scss'],
     animations: [NavigationSlideInOut],
 })
 export class NavigationItemComponent implements OnInit {
     @Input()
     navigation: any;
+    @Input()
+    // 嵌套深度
+    depth: number;
+    // 导航title样式
+    titleClassName: string;
     navigations = navigations;
 
     constructor(@Inject('navigationService') private service) { }
 
     ngOnInit(): void {
+        this.depth = this.depth ? this.depth : 1;
+        this.depth = (this.depth <= 5) ? this.depth : 5;
+        this.titleClassName = 'navigation-title-' + this.depth;
     }
 
     toggleState(event) {

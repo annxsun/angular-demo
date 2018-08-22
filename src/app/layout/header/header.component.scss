@@ -1,18 +1,21 @@
-@import '../../../assets/less/variables/variable.less';
+@import '../../../assets/scss/variable.scss';
+
 .header-row{
     padding-left: 0px !important;
+    background-color: $mainColor;
+    color: #fff;
     .brand-container {
-        height: @headerH;
-        width: @sidenavW;
+        height: $headerH;
+        width: $sidenavW;
         display: flex;
     }
     .menu-controll{
-        height: @headerH;
+        height: $headerH;
         display: flex;
         align-items: center;
         flex: 1;
         .menu-button{
-            height: @headerH;
+            height: $headerH;
         }
     }
 }

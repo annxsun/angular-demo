@@ -1,0 +1,33 @@
+<div class="sign-box">
+        <mat-card class="sign">
+            <mat-card-title class="sign-title">
+                用户注册
+            </mat-card-title>
+            <form class="sign-form" [formGroup]="signForm" (ngSubmit)="sign()">
+                <mat-form-field>
+                    <mat-label>用户名</mat-label>
+                    <input type="text" placeholder="请输入用户名" formControlName="name" required matInput>
+                    <mat-error *ngIf="formValidatiionInfo.formErrors.name">{{formValidatiionInfo.formErrors.name}}</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>邮箱</mat-label>
+                    <input type="email" placeholder="请输入邮箱" formControlName="email" required matInput>
+                    <mat-error *ngIf="formValidatiionInfo.formErrors.email">{{formValidatiionInfo.formErrors.email}}</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>密码</mat-label>
+                    <input [type]="passwordHide ? 'password' : 'text'"  placeholder="请输入您的密码" formControlName="password" matInput required>
+                    <mat-icon matSuffix (click)="passwordHide = !passwordHide">{{passwordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    <mat-error *ngIf="formValidatiionInfo.formErrors.password">{{formValidatiionInfo.formErrors.password}}</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                        <mat-label>确认密码</mat-label>
+                        <input [type]="rePasswordHide ? 'password' : 'text'"  placeholder="请输入您的密码" formControlName="repassword" matInput required>
+                        <mat-icon matSuffix (click)="rePasswordHide = !rePasswordHide">{{rePasswordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                        <mat-error *ngIf="formValidatiionInfo.formErrors.repassword">{{formValidatiionInfo.formErrors.repassword}}</mat-error>
+                </mat-form-field>
+                <div class="tips"><a routerLink="/signin">账号登录</a></div>
+                <button class="submit" mat-raised-button color="primary" type="submit" [disabled]="!signForm.valid">注册</button>
+            </form>
+        </mat-card>
+    </div>

@@ -18,6 +18,8 @@ import { MyHttpService } from './myhttp.service';
         MyHttpRoutingModule
     ],
     exports: [],
-    providers: [MyHttpService],
+    providers: [
+        MyHttpService,
+    ],
 })
 export class MyHttpModule {}

@@ -1,4 +1,4 @@
-<div class="user-container" [documentClose]="this">
+<div class="user-container" [documentClose]="this"> 
     <button mat-button (click)="toggleDropdown()">
         <div class="avatar-container">
             <img class="avatar">
@@ -20,7 +20,7 @@
             <span class="title">帮助</span>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item class="item">  
+        <mat-list-item class="item" (click)="logout()">  
             <mat-icon class="icon">exit_to_app</mat-icon>
             <span class="title">退出</span>
         </mat-list-item>

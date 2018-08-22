@@ -1,11 +1,11 @@
-<a class="navigation-self" *ngIf="!navigation.hide" [class.active]="navigation.isOpen === 'active-style' || navigation.isOpen === 'inactive-style'" (click)="toggleState($event)" [routerLink]="navigation.url">
+<a class="navigation-self" *ngIf="!navigation.hide" [class.noitem]="!navigation.url" [class.active]="navigation.isOpen === 'active-style' || navigation.isOpen === 'inactive-style'"  (click)="toggleState($event)" [routerLink]="navigation.url">
     <mat-icon class="navigation-icon" *ngIf="navigation.icon">{{navigation.icon}}</mat-icon>
-    <span class="navigation-title" >{{navigation.title}}</span>
+    <span class="navigation-title" [ngClass]="titleClassName" >{{navigation.title}}</span>
     <p class="navigation-badge" *ngIf="navigation.badge" [ngStyle]="{'background-color': navigation.badge.bg}">{{navigation.badge.title}}</p>
     <mat-icon class="navigation-collapse-arrow" *ngIf="!navigation.url" >keyboard_arrow_right</mat-icon>
 </a>
 <div class="navigation-children" *ngIf="navigation.children && !navigation.hide" [@slideInOut]="navigation.isOpen">
     <ng-container *ngFor="let children of navigation.children">
-        <app-navigation-item [navigation]="children"></app-navigation-item>
+        <app-navigation-item [navigation]="children" [depth]="depth + 1"></app-navigation-item>
     </ng-container>
 </div>

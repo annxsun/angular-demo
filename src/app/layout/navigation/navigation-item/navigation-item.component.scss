@@ -1,20 +1,19 @@
-@import '../../../../assets/less/variables/variable.less';
+@import '../../../../assets/scss/variable.scss';
 
-
-.navigation-self{
-    height: @sidenavFH;
+.navigation-self {
+    height: $sidenavFH;
     display: flex;
     align-items: center; 
     justify-content: start;
     text-decoration: none;
     color: inherit;
     
-    @iconS:16px;
+    $iconS:16px;
     .navigation-icon{
-        width: @iconS;
-        height: @iconS;
-        line-height: @iconS;
-        font-size: @iconS !important;
+        width: $iconS;
+        height: $iconS;
+        line-height: $iconS;
+        font-size: $iconS !important;
         margin: 0px 12px;
     }
     .navigation-title{
@@ -22,10 +21,10 @@
     }
     .navigation-badge{
         display: block;
-        min-width: @iconS;
-        max-width: 5 * @iconS;
-        height: @iconS;
-        line-height: @iconS;
+        min-width: $iconS;
+        max-width: 5 * $iconS;
+        height: $iconS;
+        line-height: $iconS;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -35,34 +34,36 @@
         font-weight: bold;
         text-align: center;
         transition: opacity .2s ease-in-out .1s;
-        background-color: bisque;
+        background-color: $mainColor;
+        color: #fff;
     }
     .navigation-collapse-arrow {
         margin-right: 12px;
     }
     &:hover {
-        background-color: #e0dfdf;
+        background-color: $menuColorActive;
         font-weight: bolder;
     }
     &.active {
+        color: $mainColor;
+    }
+    &.noitem.active {
+        background-color: $menuColorActive;
+        font-weight: bolder;
+        color: $mainColor;
         .navigation-collapse-arrow {
             transform: rotate(90deg);
-        }
-        .navigation-title{
-            font-weight: bolder;
         }
     }
 
 }
 
-.navigation-children { 
+.navigation-children{
     overflow: hidden;
-    .navigation-title{
-        padding-left: 40px;
-    }
-    .navigation-children { 
-        .navigation-title{
-            padding-left: 80px;
-        }
+}
+
+@for $i from 1 through 5 {
+    .navigation-children .navigation-title-#{$i} {
+        padding-left: 40px * ($i - 1);
     }
 }
