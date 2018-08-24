@@ -15,26 +15,29 @@ export class MyHttpService {
     private http: HttpClient,
     private service: HttpRequestService) { }
 
-    searchUsers(term: string): Observable<{} | UserItem[]> {
+    searchUsers(term: string): Observable<UserItem[]> {
       return this.service.doGet<UserItem[]>(urls.user.getUsersByName, {name: term});
     }
 
-    addUsers(user: UserItem): Observable<{} | any> {
+    addUsers(user: UserItem): Observable<any> {
       return this.service.doPost<any>(urls.user.addUser, user);
     }
 
-    delete (user: UserItem | number): Observable<{} | any> {
+    delete (user: UserItem | number): Observable<any> {
       const id = typeof user === 'number' ? user : user.id;
       return this.service.doDelete<any>(urls.user.deleteUser, {id: id});
     }
 
-    getUser(id: string): Observable<{} | UserItem> {
+    getUser(id: string): Observable<UserItem> {
       return this.service.doGet<UserItem>(urls.user.getUserByid, {id: id});
     }
 
 
-    updateUser(user: UserItem): Observable<{} | any> {
+    updateUser(user: UserItem): Observable<any> {
       return this.service.doPost<any>(urls.user.update, user);
     }
+    
+  
+
 
 }
