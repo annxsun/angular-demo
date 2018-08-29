@@ -1,13 +1,13 @@
-@import '../../assets/less/variables/variable.less';
+@import '../../assets/scss/variable.scss';
 
 mat-sidenav{
-  width: @sidenavW;
+  width: $sidenavW;
 }
 
 .layout-container{
     .header-container {
         width: 100%;
-        height: @headerH;
+        height: $headerH;
         position: fixed;
         top: 0px;
         left: 0px;
@@ -18,15 +18,14 @@ mat-sidenav{
         height: 100vh;
         .sidenav{
             position: fixed;
-            top: @headerH;
+            top: $headerH;
             bottom: 0;
             left: 0;
             padding: 0;
-            min-width: @sidenavW;
-            box-shadow: 6px 0 6px rgba(0,0,0,.1);
+            min-width: $sidenavW;
         }
         .main-container{
-           padding: @headerH 0px;
+           padding: $headerH + 30px 30px;
         }
     }
 }

@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-user',
     templateUrl: './user.component.html',
-    styleUrls: ['./user.component.less']
+    styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
 
     isOpen: boolean;
-    constructor() { }
+
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
         this.isOpen = false;
@@ -26,5 +28,10 @@ export class UserComponent implements OnInit {
      */
     close() {
         this.isOpen = false;
+    }
+
+    /** 退出登陆 */
+    logout() {
+        this.router.navigate(['/signin']);
     }
 }

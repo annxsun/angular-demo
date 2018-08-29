@@ -1,0 +1,15 @@
+.mat-paginator {
+    .mat-paginator-page-size {
+        display: none !important;
+    }
+    .mat-paginator-range-actions {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        width: 100%;
+        .mat-paginator-range-label {
+            margin: 0px;
+            flex: 1;
+        }
+    }
+}

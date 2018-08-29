@@ -1,17 +1,19 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { navigationsIndexTable } from '../../../../config/navigation';
+import { Router, NavigationEnd, NavigationStart} from '@angular/router';
+import { navigationsIndexTable } from 'config/navigation';
+import { LoadingService } from '../../component/loading/loading.service';
+
 @Component({
     selector: 'app-navigation',
     templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.less'],
+    styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
 
     navigations: any;
     navigationsIndexTable: any;
 
-    constructor(private router: Router, @Inject('navigationService') private service) {
+    constructor(private router: Router, @Inject('navigationService') private service, private loading: LoadingService) {
         this.navigationsIndexTable = navigationsIndexTable;
         this.navigations = this.service.getNavigations();
         this.navigationListener();
@@ -22,7 +24,10 @@ export class NavigationComponent implements OnInit {
 
     navigationListener() {
         this.router.events.subscribe(obj => {
-            if (obj instanceof NavigationEnd) {
+            if (event instanceof NavigationStart) {
+                this.loading.start();
+            } else if (obj instanceof NavigationEnd) {
+                this.loading.stop();
                 // 没有展开任何导航
                 if (obj.urlAfterRedirects === '/') {
                     return;
@@ -34,6 +39,9 @@ export class NavigationComponent implements OnInit {
                 let indexArr = [this.navigations.find(data => data.id === urlAfterRedirectsArr[0])];
                 indexArr[0]['isOpen'] = 'active-style';
                 for (let i = 1; i < urlAfterRedirectsArr.length; i++) {
+                    if (!indexArr[i - 1].children) {
+                        continue;
+                    }
                      const select = indexArr[i - 1].children.find(data => data.id === urlAfterRedirectsArr[i]);
                      if (select) {
                          select['isOpen'] = 'active-style';

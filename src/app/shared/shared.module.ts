@@ -1,23 +1,29 @@
 import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialComponentsModule } from './material.module';
+import { MyComponentModule } from './mycomponent.module';
 
 @NgModule({
     declarations: [],
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         FlexLayoutModule,
-        MaterialComponentsModule
+        MaterialComponentsModule,
+        MyComponentModule
      ],
     exports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
+        FormsModule,
         FlexLayoutModule,
-        MaterialComponentsModule
+        MaterialComponentsModule,
+        MyComponentModule
     ],
     providers: [],
 })

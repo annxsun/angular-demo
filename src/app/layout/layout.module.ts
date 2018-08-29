@@ -6,7 +6,8 @@ import { HeaderModule } from './header/header.module';
 import { NavigationeModule } from './navigation/navigation.module';
 import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout.component';
-
+import { LoadingComponent } from '../component/loading/loading.component';
+import { LoadingService } from '../component/loading/loading.service';
 
 @NgModule({
   imports: [
@@ -17,8 +18,10 @@ import { LayoutComponent } from './layout.component';
   ],
   declarations: [
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoadingComponent
   ],
-  exports: [LayoutComponent]
+  exports: [LayoutComponent],
+  providers: [LoadingService]
 })
 export class LayoutModule { }

@@ -1,8 +1,8 @@
-@import '../../../../assets/less/variables/variable.less';
+@import '../../../../assets/scss/variable.scss';
 
 .notification-container {
     position: relative;
-    height: @headerH;
+    height: $headerH;
     .notifications-tip{
         height: 100%;
         margin-right: 15px;
@@ -12,10 +12,10 @@
     }
     .notification-box {
         position: absolute;
-        top: @headerH;
+        top: $headerH;
         right: 0;
         width: 100%;
-        min-width: 300px;
+        min-width: $notificationW;
         padding: 0px !important;
         visibility: hidden;
         transform: translateY(-135%);
@@ -45,7 +45,7 @@
             }
         }
         .card-content {
-            height: 280px;
+            height: $notificationH;
             overflow-y: auto;
             margin-bottom: 0px !important;
            .nav-list{
@@ -84,7 +84,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-          
         }
         
     }

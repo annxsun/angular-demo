@@ -33,32 +33,15 @@
             'title': '列表模拟',
             'url': '/http/list',
           },
-          {
-            'id': 'create',
-            'title': '表单模拟',
-            'url': '/http/create',
-          },
+          // {
+          //   'id': 'create',
+          //   'title': '表单模拟',
+          //   'url': '/http/create',
+          // },
           {
               'id': 'upload',
               'title': '文件上传模拟',
               'url': '/http/upload',
-          }
-        ]
-    },
-    {
-        'id': 'login',
-        'title': '扩展页面',
-        'icon': 'filter',
-        'auth': ['0', '1'],
-        'children': [
-          {
-            'id': 'sigin',
-            'title': '登录',
-            'url': '/login/sigin'
-          }, {
-            'id': 'sigup',
-            'title': '注册',
-            'url': '/login/sigup'
           }
         ]
     },
@@ -76,7 +59,7 @@
           {
             'id': 'echarts',
             'title': '图表',
-            'url': '/extend/echarts',
+            'url': '/extend/echarts/overview1',
           },
           {
             'id': 'amap',

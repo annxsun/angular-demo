@@ -1,0 +1,35 @@
+/***** 尺寸相关的变量 *****/
+$sidenavW: 260px;      // 侧边栏的宽度
+$sidenavFH: 48px;      // 侧边栏每一个 item 的高度
+$sidenavIconS: 16px;   // 侧边栏 icon 和 badge 的大小
+$headerH:  64px;       // 头部的高度
+$headerAvatarS: 40px;  // 头部的用户头像大小
+$notificationW: 300px; // 消息弹出框最小宽度
+$notificationH: 280px; // 消息弹出框列表高度
+$userW: 160px;         // 用户下拉框最小宽度
+
+/***** 颜色相关的变量 *****/
+@import '~@angular/material/theming';
+//TODO 根据用户来选择主题, 可以直接选择 material 已有的主题, 也可以自定义
+// $my-primary: $mat-red;
+// $my-primary: $mat-pink;
+// $my-primary: $mat-purple;
+// $my-primary: $mat-deep-purple;
+// $my-primary: $mat-blue;
+// $my-primary: $mat-light-blue;
+// $my-primary: $mat-cyan;
+// $my-primary: $mat-teal;
+// $my-primary: $mat-green;
+// $my-primary: $mat-light-green;
+// $my-primary: $mat-lime;
+// $my-primary: $mat-yellow;
+// $my-primary: $mat-amber;
+// $my-primary: $mat-orange;
+// $my-primary: $mat-deep-orange;
+// $my-primary: $mat-brown;
+// $my-primary: $mat-grey;
+// $my-primary: $mat-blue-grey;
+$my-primary: $mat-indigo;
+
+$mainColor: mat-color($my-primary, 500);            // 主色调
+$menuColorActive: mat-color($my-primary, 50);       // 导航激活背景色

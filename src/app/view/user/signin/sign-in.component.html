@@ -1,0 +1,22 @@
+<div class="sign-box">
+    <mat-card class="sign">
+        <mat-card-title class="sign-title">
+            用户登陆
+        </mat-card-title>
+        <form class="sign-form" [formGroup]="signForm" (ngSubmit)="sign()">
+            <mat-form-field>
+                <mat-label>用户名</mat-label>
+                <input type="text" placeholder="请输入用户名" formControlName="name" required matInput>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.name">{{formValidatiionInfo.formErrors.name}}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>密码</mat-label>
+                <input [type]="hide ? 'password' : 'text'"  placeholder="请输入您的密码" formControlName="password" matInput required>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                <mat-error *ngIf="formValidatiionInfo.formErrors.password">{{formValidatiionInfo.formErrors.password}}</mat-error>
+            </mat-form-field>
+            <div class="tips"><a routerLink="/signup">立即注册</a></div>
+            <button class="submit" mat-raised-button color="primary" type="submit" [disabled]="!signForm.valid">登录</button>
+        </form>
+    </mat-card>
+</div>

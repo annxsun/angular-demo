@@ -1,0 +1,48 @@
+<div>
+    <mat-card><app-bar-line text="某站点用户访问来源" subtext="纯属虚构" [series]="seriesBar1" mainAxis="xAxis" [mainAxisData]="mainAxisDataBar1" toolbox="1"></app-bar-line></mat-card>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-pie text="某站点用户访问来源" subtext="纯属虚构" [series]="series1"></app-pie></mat-card>
+    </div>
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-pie text="某站点用户访问来源" [series]="series4"></app-pie></mat-card>
+    </div>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-pie text="某站点用户访问来源" subtext="纯属虚构" [series]="series2"></app-pie></mat-card>
+    </div>
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-pie text="某站点用户访问来源"  [series]="series3"></app-pie></mat-card> 
+    </div>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" subtext="纯属虚构" [series]="seriesBar1" mainAxis="yAxis" [mainAxisData]="mainAxisDataBar1" ></app-bar-line></mat-card>
+    </div>
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" [series]="seriesBar1" mainAxis="xAxis" [mainAxisData]="mainAxisDataBar1"  stack="合计"></app-bar-line></mat-card>
+    </div>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" subtext="纯属虚构" [series]="seriesBar3" [mainAxisData]="mainAxisDataBar1" type="line"></app-bar-line></mat-card>
+    </div>
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" [series]="seriesBar1" mainAxis="xAxis" [mainAxisData]="mainAxisDataBar1"   type="line" smooth="true"></app-bar-line></mat-card>
+    </div>
+</div>
+
+<div fxLayout="row wrap">
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" subtext="纯属虚构" [series]="seriesBar1" [mainAxisData]="mainAxisDataBar1" type="line" areaStyle="true" stack="合计" oundaryGap="false"></app-bar-line></mat-card>
+    </div>
+    <div fxFlex.gt-sm="50">
+        <mat-card><app-bar-line text="某站点用户访问来源" [series]="seriesBar2" [mainAxisData]="mainAxisDataBar1" type="line" smooth="true" areaStyle="true" boundaryGap="false" [crossAxis]= "axis" ></app-bar-line></mat-card>
+    </div>
+</div>
