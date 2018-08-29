@@ -59,7 +59,7 @@
           {
             'id': 'echarts',
             'title': '图表',
-            'url': '/extend/echarts',
+            'url': '/extend/echarts/overview1',
           },
           {
             'id': 'amap',

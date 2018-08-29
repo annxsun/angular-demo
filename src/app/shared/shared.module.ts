@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialComponentsModule } from './material.module';
+import { MyComponentModule } from './mycomponent.module';
 
 @NgModule({
     declarations: [],
@@ -12,7 +13,8 @@ import { MaterialComponentsModule } from './material.module';
         FormsModule,
         ReactiveFormsModule,
         FlexLayoutModule,
-        MaterialComponentsModule
+        MaterialComponentsModule,
+        MyComponentModule
      ],
     exports: [
         CommonModule,
@@ -20,7 +22,8 @@ import { MaterialComponentsModule } from './material.module';
         ReactiveFormsModule,
         FormsModule,
         FlexLayoutModule,
-        MaterialComponentsModule
+        MaterialComponentsModule,
+        MyComponentModule
     ],
     providers: [],
 })

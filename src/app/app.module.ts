@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
+import { NgxEchartsModule } from 'ngx-echarts';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './view/user/user.module';
 import { LayoutModule } from './layout/layout.module';
@@ -26,6 +27,7 @@ import { UserMockService } from './service/mock/user-mock.service';
     LayoutModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxEchartsModule
     HttpClientInMemoryWebApiModule.forRoot(
       UserMockService, { dataEncapsulation: false }
     )

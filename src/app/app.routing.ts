@@ -17,6 +17,10 @@ const routes: Routes = [
               path: 'http',
               loadChildren: './view/myhttp/myhttp.module#MyHttpModule'
             },
+            {
+                path: 'extend/echarts',
+                loadChildren: './view/data-analysis/data-analysis.module#DataAnalysisModule'
+            },
         ]
     },
     { path: '**', redirectTo: '', component: SignInComponent }

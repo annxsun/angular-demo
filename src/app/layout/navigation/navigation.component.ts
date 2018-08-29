@@ -39,6 +39,9 @@ export class NavigationComponent implements OnInit {
                 let indexArr = [this.navigations.find(data => data.id === urlAfterRedirectsArr[0])];
                 indexArr[0]['isOpen'] = 'active-style';
                 for (let i = 1; i < urlAfterRedirectsArr.length; i++) {
+                    if (!indexArr[i - 1].children) {
+                        continue;
+                    }
                      const select = indexArr[i - 1].children.find(data => data.id === urlAfterRedirectsArr[i]);
                      if (select) {
                          select['isOpen'] = 'active-style';
