@@ -58,7 +58,6 @@ export class BarLineComponent implements OnInit {
         this.dataZoom();
         this.initSeries();
         this.initToolbox();
-        console.log("this.chartOption", this.chartOption);
     }
 
     /**

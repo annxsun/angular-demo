@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart} from '@angular/router';
 import { navigationsIndexTable } from 'config/navigation';
-import { LoadingService } from '../../component/loading/loading.service';
+import { LoadingService } from '../../shared/loading/loading.service';
 
 @Component({
     selector: 'app-navigation',

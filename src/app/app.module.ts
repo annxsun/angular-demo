@@ -27,11 +27,10 @@ import { UserMockService } from './service/mock/user-mock.service';
     LayoutModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxEchartsModule
+    NgxEchartsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       UserMockService, { dataEncapsulation: false }
-    )
-
+    ),
   ],
   providers: [HttpRequestService],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@ const routes: Routes = [
               loadChildren: './view/myhttp/myhttp.module#MyHttpModule'
             },
             {
-                path: 'extend/echarts',
+                path: 'extend',
                 loadChildren: './view/data-analysis/data-analysis.module#DataAnalysisModule'
             },
         ]

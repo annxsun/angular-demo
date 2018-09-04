@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormValidatiion } from '../../../util/formValidation';
 import { MyHttpService } from '../myhttp.service';
-import { LoadingService } from '../../../component/loading/loading.service';
+import { LoadingService } from '../../../shared/loading/loading.service';
 
 @Component({
     selector: 'app-create',

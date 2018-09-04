@@ -6,7 +6,7 @@ import { MyHttpService } from '../myhttp.service';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { MatPaginator, MatTableDataSource, MatSort, MatPaginatorIntl } from '@angular/material';
-import { LoadingService } from '../../../component/loading/loading.service';
+import { LoadingService } from '../../../shared/loading/loading.service';
 
 @Component({
     selector: 'app-list',

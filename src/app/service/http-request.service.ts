@@ -9,7 +9,7 @@ export class HttpRequestService {
 
     /**当前登录用的token */
     private token = '';
-    
+
     constructor(private http: HttpClient) {
 
     }

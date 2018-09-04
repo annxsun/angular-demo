@@ -1,0 +1,23 @@
+<mat-card class="card">
+    <mat-card-title class="title">地图练习一</mat-card-title>
+    <mat-card-content class="content">
+        <form class="amap-form" fxLayout="row" fxLayoutAlign="start center">
+            <mat-form-field>
+                <input placeholder="请输入出发地" autocomplete="off" matInput amapAutocomplete (select)="origin($event, 'select')">
+            </mat-form-field>
+            <div class="swap-calls"><i class="material-icons">swap_calls</i></div>
+            <mat-form-field>
+                <input placeholder="请输入目的地" autocomplete="off" matInput amapAutocomplete (select)="destination($event, 'select')">
+            </mat-form-field>
+        </form>
+        <div class="amap-content">
+            <app-amap zoom="13" (click)="mapClick($event,'mapClick')">
+                <amap-marker *ngFor="let mark of markers; let i=index" [position]="mark" (click)="markClick($event,'mapClick', i)"></amap-marker>
+                <app-amap-info-window [position]="infoWindowPosition" *ngIf="infoWindowPosition">
+                     我还是一个简单的信息窗体 {{info}}
+                </app-amap-info-window>
+                <div amapdriving [searchValue]="searchValue" hideMarkers="true" class="panel"></div>
+            </app-amap>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -59,12 +59,12 @@
           {
             'id': 'echarts',
             'title': '图表',
-            'url': '/extend/echarts/overview1',
+            'url': '/extend/echarts/overview',
           },
           {
             'id': 'amap',
             'title': '高德地图',
-            'url': '/extend/amap'
+            'url': '/extend/amap/overview'
           }, {
             'id': 'calendar',
             'title': '日历',

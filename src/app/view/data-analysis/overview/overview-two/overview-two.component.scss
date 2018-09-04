@@ -1,0 +1,46 @@
+
+.card {
+    padding: 0px;
+    .title{
+        padding: 15px 30px;
+        border-bottom: 1px solid #ccc;
+    }
+    .content{
+        padding: 15px 30px;
+    }
+}
+
+.amap-content {
+    width: 100%;
+    margin-top: 10px;
+    height: 480px;
+    position: relative;
+    .panel{
+        position: absolute;
+        background-color: transparent;
+        height: 90%;
+        overflow-y: auto;
+        top: 5%;
+        right: 10px;
+        width: 280px;
+    }
+}
+
+
+
+.amap-form {
+    .swap-calls {
+        margin: 0px 10px;
+        i {
+            transform: rotate(-90deg);
+            // transform: rotate(-90deg) scaleX(-1);
+        }
+    }
+    .planning{
+        margin-left: 10px;
+    }
+}
+
+.demo-map {
+    height: 400px;
+}

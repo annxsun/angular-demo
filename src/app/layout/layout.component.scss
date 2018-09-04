@@ -5,6 +5,7 @@ mat-sidenav{
 }
 
 .layout-container{
+    height: 100%;
     .header-container {
         width: 100%;
         height: $headerH;
@@ -15,7 +16,7 @@ mat-sidenav{
     }
     .sidenav-container{
         width: 100%;
-        height: 100vh;
+        height: inherit;
         .sidenav{
             position: fixed;
             top: $headerH;
