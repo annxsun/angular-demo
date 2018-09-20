@@ -76,7 +76,7 @@
           }, {
               'id': 'processon',
               'title': '流程图',
-              'url': '/extend/processon'
+              'url': '/extend/processon/overview'
           }, {
             'id': 'speed-dial',
             'title': 'speed-dial',

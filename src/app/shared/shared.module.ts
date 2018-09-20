@@ -12,10 +12,12 @@ import { PieComponent } from './charts/pie/pie.component';
 // amap
 import { AmapModule } from './amap/amap.module';
 
+import { JointjsModule } from  './jointjs/jointjs.module';
+
 @NgModule({
     declarations: [
         BarLineComponent,
-        PieComponent
+        PieComponent,
     ],
     imports: [
         CommonModule,
@@ -24,7 +26,8 @@ import { AmapModule } from './amap/amap.module';
         FlexLayoutModule,
         MaterialComponentsModule,
         NgxEchartsModule,
-        AmapModule
+        AmapModule,
+        JointjsModule
      ],
     exports: [
         CommonModule,
@@ -34,7 +37,8 @@ import { AmapModule } from './amap/amap.module';
         MaterialComponentsModule,
         BarLineComponent,
         PieComponent,
-        AmapModule
+        AmapModule,
+        JointjsModule,
     ],
     providers: [],
 })

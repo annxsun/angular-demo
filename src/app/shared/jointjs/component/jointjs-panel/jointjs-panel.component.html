@@ -1,0 +1,12 @@
+<ul class="panel-container">
+    <li class="panel-item" *ngFor="let item of panelItems">
+        <h3 class="panel-item-title">{{item.title}}</h3>
+        <img 
+        draggable="true"
+        class="panel-icon" 
+        *ngFor="let imgItem of item.listDate"  
+        src="./assets/image/jointjs-svg/{{imgItem.fileName}}.svg"  
+        appMovable
+        >
+    </li>
+</ul>
